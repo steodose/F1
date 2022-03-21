@@ -1,7 +1,7 @@
 name: "Yay internet!"
 output_dir: "."
 navbar:
-  title: "NFL Analytics"
+  title: "F1 Analytics"
   right:
     - text: "Summary"
       href: F1-Summary.html
