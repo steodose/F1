@@ -6,7 +6,7 @@ navbar:
     - text: "Summary"
       href: F1-Summary.html
     - text: "About"
-      href: about.html
+      href: About.html
     - icon: fa-home fa-lg
       href: https://stephanteodosescu.com/      
     - icon: fa-twitter fa-lg
