@@ -233,7 +233,7 @@ vi_raw <- viURL %>%
     html_nodes(".page-main-content li") %>%
   html_text()
 
-# turn into a df and slice off only the last 30 rows as these are the season F1 championship odds
+# turn into a df and slice only rows 12-50 as these are the season F1 championship odds rows
 vi_clean <- vi_raw %>% 
   as_tibble() %>% 
   slice(12:50)
