@@ -1,0 +1,12 @@
+---
+title: "Welcome"
+---
+This website is your home for everything Formula 1 analytics. 
+
+We use data from the Ergast Developer API, which is an experimental web service providing a historical record of motor racing data for the Formula 1  world championships back to 1950. 
+
+Read more at my blog [Between the Pipes](https://betweenpipes.wordpress.com/).
+
+This site is not associated with Formula 1. 
+
+<img src="/Users/Stephan/Desktop/R Projects/Formula/F1_logo5.png" style="width:25%">
