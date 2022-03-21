@@ -138,7 +138,7 @@ driver_results_2022 <- driver_results_df %>%
         driverRef == "kevin_magnussen" ~ "Denmark.png",
         driverRef == "zhou" ~ "china.png",
         driverRef == "latifi" ~ "Canada.png",
-        driverRef == "leclerc" ~ "Poland.png",
+        driverRef == "leclerc" ~ "monaco.png",
         driverRef == "norris" ~ "united-kingdom.png",
         driverRef == "ocon" ~ "France.png",
         driverRef == "perez" ~ "Mexico.png",
@@ -203,7 +203,7 @@ driver_results_2022 <- driver_results_df %>%
         driverRef == "hulkenberg" ~ "aston_martin",
         TRUE ~ "None"
     )) %>% 
-    mutate('driver_photo' = paste0('https://raw.githubusercontent.com/steodose/BlogPosts/master/Formula%201/drivers/', driverRef, '.png')) %>% 
+    mutate('driver_photo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/drivers/', driverRef, '.png')) %>% 
     group_by(Driver,year) %>%
     mutate(wins = max(wins), points=max(points)) %>% 
     arrange(desc(points))
@@ -214,9 +214,9 @@ driver_table <- driver_results_2022 %>%
     group_by(Driver, country, year, driver_photo, constructor, manufacturer) %>% 
     summarise(wins = max(wins),
               points = max(points)) %>% 
-    mutate('logo' = paste0('https://raw.githubusercontent.com/steodose/BlogPosts/master/Formula%201/flags/', country, '')) %>%
-    mutate('constructor_logo' = paste0('https://raw.githubusercontent.com/steodose/BlogPosts/master/Formula%201/teams/', constructor, '.png')) %>%
-    mutate('manufacturer_logo' = paste0('https://raw.githubusercontent.com/steodose/BlogPosts/master/Formula%201/manufacturers/', manufacturer, '.png')) %>%
+    mutate('logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/flags/', country, '')) %>%
+    mutate('constructor_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/teams/', constructor, '.png')) %>%
+    mutate('manufacturer_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/manufacturers/', manufacturer, '.png')) %>%
     arrange(desc(points)) %>% 
     ungroup() %>% 
     mutate(rank = row_number()) %>%
@@ -327,7 +327,7 @@ summary_table <- reactable(
                   fullWidth = FALSE, 
                   defaultColDef = colDef(align = "center", minWidth = 95)
         ) %>% 
-  add_title("2021 Formula 1 Standings",
+  add_title("2022 Formula 1 Standings",
             font_size = 28) %>% 
   add_subtitle("Click a column header to sort by that statistic.",
                font_size = 14,
