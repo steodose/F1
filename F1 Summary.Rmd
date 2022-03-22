@@ -8,16 +8,6 @@ output:
     fig_height: 7
 ---
 
-```{r, echo=FALSE}
-
-# Insert F1 logo in top right of report
-htmltools::img(src = knitr::image_uri("/Users/Stephan/Desktop/R Projects/F1/F1_logo5.png"), 
-               alt = 'logo', 
-               style = 'position:absolute; top:0; right:0; padding:10px; width: 110px; height: 128px')
-
-```
-
-
 ```{r setup, include=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
 ```
@@ -167,7 +157,6 @@ driver_results_2022 <- driver_results_df %>%
         driverRef == "norris" ~ "mclaren",
         driverRef == "ocon" ~ "alpine",
         driverRef == "perez" ~ "red_bull",
-        driverRef == "raikkonen" ~ "alfa",
         driverRef == "ricciardo" ~ "mclaren",
         driverRef == "russell" ~ "mercedes",
         driverRef == "sainz" ~ "ferrari",
@@ -192,7 +181,6 @@ driver_results_2022 <- driver_results_df %>%
         driverRef == "norris" ~ "mclaren",
         driverRef == "ocon" ~ "alpine",
         driverRef == "perez" ~ "red_bull",
-        driverRef == "raikkonen" ~ "alfa",
         driverRef == "ricciardo" ~ "mclaren",
         driverRef == "russell" ~ "mercedes",
         driverRef == "sainz" ~ "ferrari",
@@ -309,9 +297,9 @@ summary_table <- reactable(
                       ),
                       constructor_logo = colDef(
                           name = "",
-                          maxWidth = 70,
+                          minWidth = 100,
                           align = "right",
-                          cell = embed_img(height = "30", width = "30")
+                          cell = embed_img(height = "25", width = "70")
                       ),
                       manufacturer_logo = colDef(
                           name = "",
@@ -327,7 +315,7 @@ summary_table <- reactable(
                   fullWidth = FALSE, 
                   defaultColDef = colDef(align = "center", minWidth = 95)
         ) %>% 
-  add_title("2022 Formula 1 Standings",
+  add_title("2022 Formula 1 Driver Standings",
             font_size = 28) %>% 
   add_subtitle("Click a column header to sort by that statistic.",
                font_size = 14,
