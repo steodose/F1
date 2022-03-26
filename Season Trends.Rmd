@@ -10,15 +10,6 @@ output:
     fig_height: 7
 ---
 
-```{r, echo=FALSE}
-
-# Insert F1 logo in top right of report
-htmltools::img(src = knitr::image_uri("/Users/Stephan/Desktop/R Projects/Formula 1/F1_logo5.png"), 
-               alt = 'logo', 
-               style = 'position:absolute; top:0; right:0; padding:10px; width: 85px; height: 100px')
-
-```
-
 
 ```{r setup, include=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
@@ -52,22 +43,21 @@ library(httr)
 library(extrafont)
 
 
-# Read in from Working Directory (accessed on Dec 8th). Got lazy and downloaded CSV tables directly 
-# from the ergast API instead of using something like dbplyr:https://ergast.com/mrd/db/
+#read in the data using read_csv
 
-circuits <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/circuits.csv")
-constructor_results <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/constructor_results.csv")
-constructor_standings <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/constructor_standings.csv")
-constructors <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/constructors.csv")
-driver_standings <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/driver_standings.csv")
-drivers <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/drivers.csv")
-lap_times <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/lap_times.csv")
-pit_stops <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/pit_stops.csv")
-qualifying <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/qualifying.csv")
-races <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/races.csv")
-results <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/results.csv")
-seasons <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/seasons.csv")
-status <- readr::read_csv("/Users/Stephan/Desktop/R Projects/Formula 1/f1db_csv/status.csv")
+circuits <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/circuits.csv")
+constructor_results <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/constructor_results.csv")
+constructor_standings <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/constructor_standings.csv")
+constructors <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/constructors.csv")
+driver_standings <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/driver_standings.csv")
+drivers <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/drivers.csv")
+lap_times <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/lap_times.csv")
+pit_stops <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/pit_stops.csv")
+qualifying <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/qualifying.csv")
+races <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/races.csv")
+results <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/results.csv")
+seasons <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/seasons.csv")
+status <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/status.csv")
 
 
 ```
@@ -124,8 +114,8 @@ driver_results_df <- driver_standings %>%
     
 
 # Filter for 2021 season and fix nationalities
-driver_results_2021 <- driver_results_df %>% 
-    filter(year == 2021) %>% 
+driver_results_2022 <- driver_results_df %>% 
+    filter(year == 2022) %>% 
     mutate(Driver = paste(forename, surname)) %>%
     mutate(country = case_when(
         driverRef == "max_verstappen" ~ "Netherlands.png", 
@@ -133,15 +123,14 @@ driver_results_2021 <- driver_results_df %>%
         driverRef == "alonso" ~ "Spain.png",
         driverRef == "bottas" ~ "Finland.png",
         driverRef == "gasly" ~ "France.png",
-        driverRef == "giovinazzi" ~ "Italy.png",
-        driverRef == "kubica" ~ "Poland.png",
+        driverRef == "kevin_magnussen" ~ "Denmark.png",
+        driverRef == "zhou" ~ "china.png",
         driverRef == "latifi" ~ "Canada.png",
-        driverRef == "leclerc" ~ "Poland.png",
-        driverRef == "mazepin" ~ "Russia.png",
+        driverRef == "leclerc" ~ "monaco.png",
         driverRef == "norris" ~ "united-kingdom.png",
         driverRef == "ocon" ~ "France.png",
         driverRef == "perez" ~ "Mexico.png",
-        driverRef == "raikkonen" ~ "Finland.png",
+        driverRef == "albon" ~ "thailand.png",
         driverRef == "ricciardo" ~ "Australia.png",
         driverRef == "russell" ~ "united-kingdom.png",
         driverRef == "sainz" ~ "Spain.png",
@@ -149,60 +138,76 @@ driver_results_2021 <- driver_results_df %>%
         driverRef == "stroll" ~ "Canada.png",
         driverRef == "tsunoda" ~ "Japan.png",
         driverRef == "vettel" ~ "Germany.png",
+        driverRef == "hulkenberg" ~ "Germany.png",
         TRUE ~ "None"
     )) %>% 
     mutate(constructor = case_when(
         driverRef == "max_verstappen" ~ "red_bull", 
         driverRef == "hamilton" ~ "mercedes",
         driverRef == "alonso" ~ "alpine",
-        driverRef == "bottas" ~ "mercedes",
+        driverRef == "bottas" ~ "alfa",
         driverRef == "gasly" ~ "alphatauri",
-        driverRef == "giovinazzi" ~ "alfa",
-        driverRef == "kubica" ~ "alfa",
+        driverRef == "kevin_magnussen" ~ "haas",
+        driverRef == "zhou" ~ "alfa",
         driverRef == "latifi" ~ "williams",
         driverRef == "leclerc" ~ "ferrari",
-        driverRef == "mazepin" ~ "haas",
+        driverRef == "albon" ~ "williams",
         driverRef == "norris" ~ "mclaren",
         driverRef == "ocon" ~ "alpine",
         driverRef == "perez" ~ "red_bull",
-        driverRef == "raikkonen" ~ "alfa",
         driverRef == "ricciardo" ~ "mclaren",
-        driverRef == "russell" ~ "williams",
+        driverRef == "russell" ~ "mercedes",
         driverRef == "sainz" ~ "ferrari",
         driverRef == "mick_schumacher" ~ "haas",
         driverRef == "stroll" ~ "aston_martin",
         driverRef == "tsunoda" ~ "alphatauri",
         driverRef == "vettel" ~ "aston_martin",
+        driverRef == "hulkenberg" ~ "aston_martin",
         TRUE ~ "None"
     )) %>% 
     mutate(manufacturer = case_when(
         driverRef == "max_verstappen" ~ "red_bull", 
         driverRef == "hamilton" ~ "mercedes",
         driverRef == "alonso" ~ "alpine",
-        driverRef == "bottas" ~ "mercedes",
+        driverRef == "bottas" ~ "alfa",
         driverRef == "gasly" ~ "alphatauri",
-        driverRef == "giovinazzi" ~ "alfa",
-        driverRef == "kubica" ~ "alfa",
+        driverRef == "kevin_magnussen" ~ "haas",
+        driverRef == "zhou" ~ "alfa",
         driverRef == "latifi" ~ "williams",
         driverRef == "leclerc" ~ "ferrari",
-        driverRef == "mazepin" ~ "haas",
+        driverRef == "albon" ~ "williams",
         driverRef == "norris" ~ "mclaren",
         driverRef == "ocon" ~ "alpine",
         driverRef == "perez" ~ "red_bull",
-        driverRef == "raikkonen" ~ "alfa",
         driverRef == "ricciardo" ~ "mclaren",
-        driverRef == "russell" ~ "williams",
+        driverRef == "russell" ~ "mercedes",
         driverRef == "sainz" ~ "ferrari",
         driverRef == "mick_schumacher" ~ "haas",
         driverRef == "stroll" ~ "aston_martin",
         driverRef == "tsunoda" ~ "alphatauri",
         driverRef == "vettel" ~ "aston_martin",
+        driverRef == "hulkenberg" ~ "aston_martin",
         TRUE ~ "None"
     )) %>% 
-    mutate('driver_photo' = paste0('https://raw.githubusercontent.com/steodose/BlogPosts/master/Formula%201/drivers/', driverRef, '.png')) %>% 
+    mutate('driver_photo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/drivers/', driverRef, '.png')) %>% 
     group_by(Driver,year) %>%
     mutate(wins = max(wins), points=max(points)) %>% 
     arrange(desc(points))
+
+# Prepare table for Reactable
+driver_table <- driver_results_2022 %>% 
+    select(country, driver_photo, Driver, constructor, manufacturer, year, wins, points) %>% 
+    group_by(Driver, country, year, driver_photo, constructor, manufacturer) %>% 
+    summarise(wins = max(wins),
+              points = max(points)) %>% 
+    mutate('logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/flags/', country, '')) %>%
+    mutate('constructor_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/teams/', constructor, '.png')) %>%
+    mutate('manufacturer_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/manufacturers/', manufacturer, '.png')) %>%
+    arrange(desc(points)) %>% 
+    ungroup() %>% 
+    mutate(rank = row_number()) %>%
+    relocate(rank, logo, driver_photo, Driver, constructor_logo, manufacturer_logo) %>% 
+    select(-country, -constructor, -manufacturer)
 
 
 ```
@@ -228,7 +233,7 @@ constructor_points <- constructor_results %>%
     left_join(races, by = "raceId") %>%
     rename(race_url = url,
            race = name) %>% 
-    filter(year == "2021") %>% 
+    filter(year == "2022") %>% 
     left_join(constructors, by = "constructorId")
 
 # Make constructors standings plot
