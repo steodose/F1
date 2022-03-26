@@ -5,6 +5,8 @@ navbar:
   right:
     - text: "Summary"
       href: F1-Summary.html
+    - text: "Races"
+      href: Races.html
     - text: "About"
       href: About.html
     - icon: fa-home fa-lg
