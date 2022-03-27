@@ -12,7 +12,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
 ```
 
-Below you'll find figures showing the current F1 standings and key advanced metrics I'm tracking for all 20 drivers and 10 teams.
+
 
 ```{r, echo =FALSE}
 
@@ -81,6 +81,8 @@ theme_custom <- function () {
 # Define an aspect ratio to use throughout. This value is the golden ratio which provides a wider than tall rectangle
 asp_ratio <- 1.618 
 
+# Define color palette to use in tables
+my_color_pal <- c("#ffffff", "#f2fbd2", "#c9ecb4", "#93d3ab", "#35b0ab")
 
 # Define 538 table theme for Reactable table(s) below
 theme_538 <- function() {
@@ -228,7 +230,7 @@ vi_clean <- vi_raw %>%
 
 vi_clean <- vi_clean %>% 
   extract(value, 
-    into = c("driver_constructor", "odds"),
+    into = c("driver_constructor", "champ_odds"),
     # regex matching for any amount of consecutive non-digits at the start
     regex = "(^\\D+)(.*)", 
     convert = TRUE
@@ -238,7 +240,7 @@ vi_clean$driver_constructor <- str_remove(vi_clean$driver_constructor, "[+]")
 
 vi_clean <- vi_clean %>% 
     type_convert() %>% 
-    mutate(implied_odds = 1-odds/(odds+100))
+    mutate(implied_odds = 1-champ_odds/(champ_odds+100))
 
 # split drivers and constructors
 vi_drivers <- vi_clean %>% 
@@ -246,17 +248,45 @@ vi_drivers <- vi_clean %>%
   rename(driver = driver_constructor)
 
 
+# do the same for next race winning odds
+vi_clean_race <- vi_raw %>% 
+  as_tibble() %>% 
+  slice(1:19) #need to chnage this after this week
+
+vi_clean_race <- vi_clean_race %>% 
+  extract(value, 
+    into = c("driver", "next_race_odds"),
+    # regex matching for any amount of consecutive non-digits at the start
+    regex = "(^\\D+)(.*)", 
+    convert = TRUE
+  )
+
+vi_clean_race$driver <- str_remove(vi_clean_race$driver, "[+]")
+
+vi_clean_race <- vi_clean_race %>% 
+    type_convert() %>% 
+    mutate(next_race_implied_odds = 1-next_race_odds/(next_race_odds+100))
+
+
 # join into drivers table
 driver_table <- left_join(driver_table, vi_drivers, by = c("Driver" = "driver"))
 
+#join in next race odds too
+driver_table <- left_join(driver_table, vi_clean_race, by = c("Driver" = "driver"))
+
 driver_table <- driver_table %>% 
-  select(-odds)
+  select(-champ_odds, -next_race_odds)
 
 # Create Reactable table
 
 summary_table <- reactable(
   driver_table,
   theme = theme_538,
+  columnGroups = list(
+                      colGroup(name = "Via Vegas Insider", 
+                               columns = c("implied_odds", "next_race_implied_odds"))
+                      ),
+
                   showSortIcon = TRUE,
                   searchable = TRUE,
                   language = reactableLang(
@@ -274,14 +304,20 @@ summary_table <- reactable(
                       wins = colDef(name = "Wins",
                                        align = "right"),
                       points = colDef(name = "Points",
-                                      style = color_scales(driver_table, colors = paletteer::paletteer_d(
-                                               palette = "ggsci::amber_material")),
-                                       align = "right"),
+                                      align = "right",
+                                      style = color_scales(driver_table, colors = my_color_pal),
+                                      format =  colFormat(digits = 0)),
                       implied_odds = colDef(name = "Champ Odds",
                                       style = color_scales(driver_table, colors = paletteer::paletteer_d(
                                                palette = "ggsci::amber_material")),
                                       format =  colFormat(percent = TRUE, digits = 0),
                                        align = "right"),
+                      next_race_implied_odds = colDef(name = "Next Race Odds",
+                                      style = color_scales(driver_table, colors = paletteer::paletteer_d(
+                                               palette = "ggsci::amber_material")),
+                                      format =  colFormat(percent = TRUE, digits = 0),
+                                       align = "right"),
+                      
                       ### add logos using embed_img()
                       logo = colDef(
                           name = "",

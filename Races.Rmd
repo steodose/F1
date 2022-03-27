@@ -177,18 +177,44 @@ races3 <- races3 %>%
         name.x == "Brazilian Grand Prix" ~ "brazil.png",
         name.x == "Abu Dhabi Grand Prix" ~ "united-arab-emirates.png",
         TRUE ~ ""
+    )) %>% 
+    mutate(circuit = case_when(
+        name.x == "Bahrain Grand Prix" ~ "bahrain.png", 
+        name.x == "Saudi Arabian Grand Prix" ~ "saudi.png",
+        name.x == "Australian Grand Prix" ~ "australia.png",
+        name.x == "Emilia Romagna Grand Prix" ~ "emilia-romagna.png",
+        name.x == "Miami Grand Prix" ~ "miami.png",
+        name.x == "Spanish Grand Prix" ~ "spanish.png",
+        name.x == "Monaco Grand Prix" ~ "monaco.png",
+        name.x == "Azerbaijan Grand Prix" ~ "azerbaijan.png",
+        name.x == "Canadian Grand Prix" ~ "canadian.png",
+        name.x == "British Grand Prix" ~ "british.png",
+        name.x == "Austrian Grand Prix" ~ "austrian.png",
+        name.x == "French Grand Prix" ~ "french.png",
+        name.x == "Hungarian Grand Prix" ~ "hungarian.png",
+        name.x == "Belgian Grand Prix" ~ "belgian.png",
+        name.x == "Dutch Grand Prix" ~ "dutch.png",
+        name.x == "Italian Grand Prix" ~ "italian.png",
+        name.x == "Singapore Grand Prix" ~ "singapore.png",
+        name.x == "Japanese Grand Prix" ~ "japan.png",
+        name.x == "United States Grand Prix" ~ "united-states.png",
+        name.x == "Mexico City Grand Prix" ~ "mexico.png",
+        name.x == "Brazilian Grand Prix" ~ "brazil.png",
+        name.x == "Abu Dhabi Grand Prix" ~ "abu-dhabi.png",
+        TRUE ~ ""
     ))
 
 
 
 # Prepare table for Reactable
 races4 <- races3 %>% 
-  select(round:driverRef, driver, constructor, country) %>% 
+  select(round:driverRef, circuit, driver, constructor, country) %>% 
   mutate('country_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/flags/', country, '')) %>%
   mutate('driver_photo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/drivers/', driverRef, '.png')) %>% 
     mutate('constructor_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/teams/', constructor, '.png')) %>% 
-  select(-driverRef, -constructor, -country) %>% 
-  relocate(round, country_logo, name.x, date, driver, driver_photo, constructor_logo, fastestLapTime, fastestLapSpeed)
+  mutate('circuit_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/circuits/', circuit)) %>% 
+  select(-driverRef, -constructor, -country, -circuit) %>% 
+  relocate(round, country_logo, name.x, date, circuit_logo, driver, driver_photo, constructor_logo, fastestLapTime, fastestLapSpeed)
 
 
 # Make table
@@ -226,6 +252,12 @@ races_table <- reactable(
                       ),
                       driver_photo = colDef(
                           name = "",
+                          maxWidth = 40,
+                          align = "right",
+                          cell = embed_img(height = "25", width = "30")
+                      ),
+                       circuit_logo = colDef(
+                          name = "Circuit",
                           maxWidth = 40,
                           align = "right",
                           cell = embed_img(height = "25", width = "30")
