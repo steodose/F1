@@ -194,21 +194,6 @@ driver_results_2022 <- driver_results_df %>%
     mutate(wins = max(wins), points=max(points)) %>% 
     arrange(desc(points))
 
-# Prepare table for Reactable
-driver_table <- driver_results_2022 %>% 
-    select(country, driver_photo, Driver, constructor, manufacturer, year, wins, points) %>% 
-    group_by(Driver, country, year, driver_photo, constructor, manufacturer) %>% 
-    summarise(wins = max(wins),
-              points = max(points)) %>% 
-    mutate('logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/flags/', country, '')) %>%
-    mutate('constructor_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/teams/', constructor, '.png')) %>%
-    mutate('manufacturer_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/manufacturers/', manufacturer, '.png')) %>%
-    arrange(desc(points)) %>% 
-    ungroup() %>% 
-    mutate(rank = row_number()) %>%
-    relocate(rank, logo, driver_photo, Driver, constructor_logo, manufacturer_logo) %>% 
-    select(-country, -constructor, -manufacturer)
-
 
 ```
 
@@ -278,7 +263,7 @@ constructor_points_plot <- constructor_points_df %>%
     theme(legend.position = "none") +
     labs(x = "", 
          y = "Points", 
-         title = "2021 Constructors' Championship Standings", 
+         title = "2022 Constructors' Championship Standings", 
          subtitle = paste0("Constructors ranked by total points earned this season. Top ten finishers receive points in the following order: 25, 18, 15, 12, 10, 8, 6, 4, 2, 1 \nwhile a bonus point is awarded for registering the fastest lap. Data as of ", format.Date(Sys.Date(), "%b. %d, %Y.")), 
          caption = "Source: Ergast API\nPlot: @steodosescu")
 
@@ -298,7 +283,7 @@ constructor_points2 <- constructor_points %>%
     mutate(cumulative_points = cumsum(points)) %>% 
     arrange(round)
 
-# Isolate Mercedes and Red Bull for coloring of line chart
+# Isolate Mercedes, Red Bull, and Ferrari for coloring of line chart
 constructors_top_2 <- constructor_points2 %>% 
     filter(constructorRef == "mercedes" |
                constructorRef == "red_bull")

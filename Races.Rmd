@@ -258,7 +258,7 @@ races_table <- reactable(
                       ),
                        circuit_logo = colDef(
                           name = "Circuit",
-                          maxWidth = 40,
+                          minWidth = 60,
                           align = "right",
                           cell = embed_img(height = "25", width = "30")
                       ),
