@@ -2,11 +2,28 @@
 title: "About"
 ---
 
-This website is your home for everything Formula 1 analytics.
+This website is an experimental/hobbyist project, and your home for everything Formula 1 analytics.
 
-## How are points scored in F1
+## How are points scored in F1?
 
-Points are awarded to the top 10 finishers in a Grand Prix. The winner receives 25 points, second place 18 points, third place 15 points, and down the list.
+Points are awarded to the top 10 finishers in a Grand Prix. The winner receives 25 points, second place 18 points, third place 15 points, and so on down the list.
+
+* 1st = 25 points
+* 2nd = 18 points
+* 3rd = 15 points
+* 4th = 12 points
+* 5th = 10 points
+* 6th = 8 points
+* 7th = 6 points
+* 8th = 4 points
+* 9th = 2 points
+* 10th = 1 points
+
+An additional point is awarded to the driver with the fastest lap, but they need to finish in the top 10 to collect that point.
+
+Similarly, points are awarded to the Constructors based on race results as well. 
+
+The points are added up over the course of the season and go toward the drivers' and constructors' championship. The driver and team with the most points at the end of the season are crowned champions. 
 
 More on these metrics and the models underpinning them can be found at [Open Source Football](https://www.opensourcefootball.com/posts/2020-09-28-nflfastr-ep-wp-and-cp-models/).
 
@@ -14,13 +31,12 @@ More on these metrics and the models underpinning them can be found at [Open Sou
 
 ## Resources and Inspiration
 
-The below resources were used to create the above plots within this document. Many thanks to all the authors of these fantastic resources:  
+The below resources were used to access Formula 1 data and create the tables and plots you see on this site. It was created exclusively using R, a language for statistical programming. Many thanks to all the authors of these fantastic resources:  
 
 | Title/Link | Author | Description |
 | :--- | :--- |:---------------|
 | [R for Data Science](https://r4ds.had.co.nz/) | Hadley Wickham, Garret Grolemund | A great overview of the `tidyverse`, covers everything from reading data in, data manipulation/summarization, data viz, and general programming in R |
-| [nflfastR Graphics Cookbook](https://jthomasmock.github.io/nfl_plotting_cookbook/#Scatter_plots) | Thomas Mock | As step-by-step guide on how to improve your nflfastR graphics. |
-| [Beginner's Guide to nflfastR](http://www.nflfastr.com/articles/beginners_guide.html) | Ben Baldwin | Covers introductory examples of how to get started with the nflfastR package, and more broadly, how to use R and the tidyverse. |
+| [Ergast API](http://ergast.com/mrd/) | Chris Newell | The ergast experimental Motor Racing Developer API provides a historical record of Formula One results data dating back to 1950. |
 | [R Markdown Intro Guide](https://rmarkdown.rstudio.com/lesson-1.html) | R Studio | Intro primer to authoring R Markdown documents.: |
 | [`ggplot2` Cookbook](http://www.cookbook-r.com/Graphs/) |  Winston Chang | Quick cookbook of `ggplot2` plots |
 | [Making Websites in R Markdown](https://www.p8105.com/making_websites.html) |  Jeff Goldsmith | Nice introduction from his course at Columbia on how to make websites using only R and Rstudio. |

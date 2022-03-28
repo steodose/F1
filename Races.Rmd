@@ -237,7 +237,7 @@ races_table <- reactable(
                                        align = "center"),
                       fastestLapTime = colDef(name = "Fastest Lap",
                                        align = "left"),
-                      fastestLapSpeed = colDef(name = "Fastest Speed (KPH)",
+                      fastestLapSpeed = colDef(name = "Fastest Speed (MPH)",
                                        align = "right"),
                       driver = colDef(name = "Winner",
                                       minWidth = 150,
