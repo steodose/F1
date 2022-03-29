@@ -226,7 +226,7 @@ vi_raw <- viURL %>%
 # turn into a df and slice only rows 12-50 as these are the season F1 championship odds rows
 vi_clean <- vi_raw %>% 
   as_tibble() %>% 
-  slice(12:50)
+  slice(21:40) #21:40 in the beginning of the week
 
 vi_clean <- vi_clean %>% 
   extract(value, 
@@ -237,6 +237,7 @@ vi_clean <- vi_clean %>%
   )
 
 vi_clean$driver_constructor <- str_remove(vi_clean$driver_constructor, "[+]")
+vi_clean$driver_constructor <- str_remove(vi_clean$driver_constructor, "[-]")
 
 vi_clean <- vi_clean %>% 
     type_convert() %>% 
@@ -251,7 +252,7 @@ vi_drivers <- vi_clean %>%
 # do the same for next race winning odds
 vi_clean_race <- vi_raw %>% 
   as_tibble() %>% 
-  slice(1:19) #need to chnage this after this week
+  slice(1:20) 
 
 vi_clean_race <- vi_clean_race %>% 
   extract(value, 
@@ -262,6 +263,7 @@ vi_clean_race <- vi_clean_race %>%
   )
 
 vi_clean_race$driver <- str_remove(vi_clean_race$driver, "[+]")
+vi_clean_race$driver <- str_remove(vi_clean_race$driver, "[-]")
 
 vi_clean_race <- vi_clean_race %>% 
     type_convert() %>% 
