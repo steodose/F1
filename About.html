@@ -13,7 +13,7 @@
 
 <title>About</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -62,6 +62,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -82,6 +83,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -234,7 +238,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -296,16 +300,30 @@ $(document).ready(function () {
 </div>
 
 
-<p>This website is your home for everything Formula 1 analytics.</p>
+<p>This website is an experimental/hobbyist project, and your home for everything Formula 1 analytics.</p>
 <div id="how-are-points-scored-in-f1" class="section level2">
-<h2>How are points scored in F1</h2>
-<p>Points are awarded to the top 10 finishers in a Grand Prix. The winner receives 25 points, second place 18 points, third place 15 points, and down the list.</p>
-<p>More on these metrics and the models underpinning them can be found at <a href="https://www.opensourcefootball.com/posts/2020-09-28-nflfastr-ep-wp-and-cp-models/">Open Source Football</a>.</p>
+<h2>How are points scored in F1?</h2>
+<p>Points are awarded to the top 10 finishers in a Grand Prix. The winner receives 25 points, second place 18 points, third place 15 points, and so on down the list.</p>
+<ul>
+<li>1st = 25 points</li>
+<li>2nd = 18 points</li>
+<li>3rd = 15 points</li>
+<li>4th = 12 points</li>
+<li>5th = 10 points</li>
+<li>6th = 8 points</li>
+<li>7th = 6 points</li>
+<li>8th = 4 points</li>
+<li>9th = 2 points</li>
+<li>10th = 1 points</li>
+</ul>
+<p>An additional point is awarded to the driver with the fastest lap, but they need to finish in the top 10 to collect that point.</p>
+<p>Similarly, points are awarded to the Constructors based on race results as well.</p>
+<p>The points are added up over the course of the season and go toward the drivers’ and constructors’ championship. The driver and team with the most points at the end of the season are crowned champions.</p>
 <hr />
 </div>
 <div id="resources-and-inspiration" class="section level2">
 <h2>Resources and Inspiration</h2>
-<p>The below resources were used to create the above plots within this document. Many thanks to all the authors of these fantastic resources:</p>
+<p>The below resources were used to access Formula 1 data and create the tables and plots you see on this site. It was created exclusively using R, a language for statistical programming. Many thanks to all the authors of these fantastic resources:</p>
 <table>
 <colgroup>
 <col width="16%" />
@@ -326,31 +344,26 @@ $(document).ready(function () {
 <td align="left">A great overview of the <code>tidyverse</code>, covers everything from reading data in, data manipulation/summarization, data viz, and general programming in R</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://jthomasmock.github.io/nfl_plotting_cookbook/#Scatter_plots">nflfastR Graphics Cookbook</a></td>
-<td align="left">Thomas Mock</td>
-<td align="left">As step-by-step guide on how to improve your nflfastR graphics.</td>
+<td align="left"><a href="http://ergast.com/mrd/">Ergast API</a></td>
+<td align="left">Chris Newell</td>
+<td align="left">The ergast experimental Motor Racing Developer API provides a historical record of Formula One results data dating back to 1950.</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="http://www.nflfastr.com/articles/beginners_guide.html">Beginner’s Guide to nflfastR</a></td>
-<td align="left">Ben Baldwin</td>
-<td align="left">Covers introductory examples of how to get started with the nflfastR package, and more broadly, how to use R and the tidyverse.</td>
-</tr>
-<tr class="even">
 <td align="left"><a href="https://rmarkdown.rstudio.com/lesson-1.html">R Markdown Intro Guide</a></td>
 <td align="left">R Studio</td>
 <td align="left">Intro primer to authoring R Markdown documents.:</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="http://www.cookbook-r.com/Graphs/"><code>ggplot2</code> Cookbook</a></td>
 <td align="left">Winston Chang</td>
 <td align="left">Quick cookbook of <code>ggplot2</code> plots</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><a href="https://www.p8105.com/making_websites.html">Making Websites in R Markdown</a></td>
 <td align="left">Jeff Goldsmith</td>
 <td align="left">Nice introduction from his course at Columbia on how to make websites using only R and Rstudio.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><a href="https://bookdown.org/yihui/rmarkdown/">R Markdown Book</a></td>
 <td align="left">Yihui Xie, J. J. Allaire, Garrett Grolemund</td>
 <td align="left">The definitive guide outlining what you can do with the rmarkdown package (Allaire, Xie, McPherson, et al. 2021), which was first created in early 2014. The package has steadily evolved into a complete ecosystem for authoring documents in a variety of output formats including the output of this document that you’re reading.</td>

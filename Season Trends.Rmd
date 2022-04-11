@@ -113,7 +113,7 @@ driver_results_df <- driver_standings %>%
     left_join(drivers, by = "driverId")
     
 
-# Filter for 2021 season and fix nationalities
+# Filter for 2022 season and fix nationalities
 driver_results_2022 <- driver_results_df %>% 
     filter(year == 2022) %>% 
     mutate(Driver = paste(forename, surname)) %>%
@@ -192,10 +192,11 @@ driver_results_2022 <- driver_results_df %>%
     mutate('driver_photo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/drivers/', driverRef, '.png')) %>% 
     mutate('car_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/teams/', constructor, '.png')) %>% 
     arrange(desc(points)) %>% 
+  group_by(Driver,year) %>%
+    mutate(wins = max(wins), points=max(points)) %>%
     mutate('points_name' = paste0(Driver,' (',points,')')) %>% 
-    group_by(Driver,year) %>%
-    mutate(wins = max(wins), points=max(points)) %>% 
-    arrange(desc(points))
+    arrange(desc(points)) %>% 
+  ungroup()
 
 
 ```
@@ -206,6 +207,8 @@ driver_results_2022 <- driver_results_df %>%
 ```{r, echo = FALSE}
 
 driver_points_plot <- driver_results_2022 %>% 
+  select(year, Driver, points, points_name, car_logo) %>% 
+  distinct(Driver, points, points_name, car_logo) %>% 
     ggplot(aes(x = fct_reorder(points_name, points), y = points)) +
     geom_col(aes(fill = points), width = 0.6, alpha = .75) + 
     scale_fill_material("red") +
@@ -311,7 +314,8 @@ constructor_points2 <- constructor_points %>%
     arrange(round) %>% 
     group_by(name) %>% 
     mutate(cumulative_points = cumsum(points)) %>% 
-    arrange(round)
+    arrange(round) %>% 
+  ungroup()
 
 # Isolate Mercedes, Red Bull, and Ferrari for coloring of line chart
 constructors_top_2 <- constructor_points2 %>% 
@@ -329,7 +333,7 @@ constructor_lineplot <- constructor_points2 %>%
     ggplot(aes(x = round, y = cumulative_points, group = name, color = name)) +
     geom_line(aes(group = name), data = constructors_others, colour = alpha("grey", 0.7), size = 1.1) +
     geom_line(aes(colour = name), data = constructors_top_2, size = 1.1) + # colourise only the filtered data
-    scale_color_manual(values=c("#00D2BE", "#FF9B00", "#FF2800")) +
+    scale_color_manual(values=c("#FF2800", "#00D2BE", "#FF9B00")) +
     labs(x = "Race",
          y = "Cumulative F1 Points",
          title = "The Race for the Constructors' Title",
