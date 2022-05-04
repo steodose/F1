@@ -198,6 +198,7 @@ driver_results_2022 <- driver_results_df %>%
     mutate(wins = max(wins), points=max(points)) %>% 
     arrange(desc(points))
 
+
 # Prepare table for Reactable
 driver_table <- driver_results_2022 %>% 
     select(country, driver_photo, Driver, constructor, manufacturer, year, wins, points) %>% 
@@ -248,6 +249,14 @@ vi_drivers <- vi_clean %>%
   slice_head(n = 20) %>% 
   rename(driver = driver_constructor)
 
+# Fix Sergio Perez and Alexander Albon's name in the Vegas Insider data
+vi_drivers <- vi_drivers %>% 
+  mutate(driver = case_when(
+        driver == "Sergio Perez" ~ "Sergio Pérez",
+        driver == "Alex Albon" ~ "Alexander Albon",
+        TRUE ~ driver
+    ))
+
 
 # do the same for next race winning odds
 vi_clean_race <- vi_raw %>% 
@@ -268,6 +277,14 @@ vi_clean_race$driver <- str_remove(vi_clean_race$driver, "[-]")
 vi_clean_race <- vi_clean_race %>% 
     type_convert() %>% 
     mutate(next_race_implied_odds = 1-next_race_odds/(next_race_odds+100))
+
+# Fix Sergio Perez and Alexander Albon's name in the Vegas Insider data
+vi_clean_race <- vi_clean_race %>% 
+  mutate(driver = case_when(
+        driver == "Sergio Perez" ~ "Sergio Pérez",
+        driver == "Alex Albon" ~ "Alexander Albon",
+        TRUE ~ driver
+    ))
 
 
 # join into drivers table
