@@ -216,10 +216,11 @@ driver_points_plot <- driver_results_2022 %>%
         aes(
             image = car_logo                             
         ), 
-        size = 0.2, 
+        size = 0.15, 
         by = "width", 
         asp = asp_ratio
     ) +
+    #coord_cartesian(clip = "off") +
     scale_y_continuous(breaks = scales::pretty_breaks(n = 20)) +
     theme_custom() + 
     theme(panel.grid.major.x = element_blank(),
