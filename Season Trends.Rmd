@@ -220,12 +220,13 @@ driver_points_plot <- driver_results_2022 %>%
         by = "width", 
         asp = asp_ratio
     ) +
-    #coord_cartesian(clip = "off") +
+   #coord_cartesian(clip = "off") +
     scale_y_continuous(breaks = scales::pretty_breaks(n = 20)) +
     theme_custom() + 
+  #theme(plot.margin = margin(25, 25, 10, 25)) +
     theme(panel.grid.major.x = element_blank(),
           plot.title = element_text(face = 'bold', size = 16), 
-          plot.title.position = 'plot') + 
+          plot.title.position = 'plot') +
     coord_flip() +
     theme(legend.position = "none") +
     labs(x = "", 
