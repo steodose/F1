@@ -111,7 +111,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 110,2003,3,18,"Brazilian Grand Prix","2003-04-06",\N,"http://en.wikipedia.org/wiki/2003_Brazilian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 111,2003,4,21,"San Marino Grand Prix","2003-04-20",\N,"http://en.wikipedia.org/wiki/2003_San_Marino_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 112,2003,5,4,"Spanish Grand Prix","2003-05-04",\N,"http://en.wikipedia.org/wiki/2003_Spanish_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-113,2003,6,23,"Austrian Grand Prix","2003-05-18",\N,"http://en.wikipedia.org/wiki/2003_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+113,2003,6,70,"Austrian Grand Prix","2003-05-18",\N,"http://en.wikipedia.org/wiki/2003_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 114,2003,7,6,"Monaco Grand Prix","2003-06-01",\N,"http://en.wikipedia.org/wiki/2003_Monaco_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 115,2003,8,7,"Canadian Grand Prix","2003-06-15",\N,"http://en.wikipedia.org/wiki/2003_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 116,2003,9,20,"European Grand Prix","2003-06-29",\N,"http://en.wikipedia.org/wiki/2003_European_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -127,7 +127,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 126,2002,3,18,"Brazilian Grand Prix","2002-03-31",\N,"http://en.wikipedia.org/wiki/2002_Brazilian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 127,2002,4,21,"San Marino Grand Prix","2002-04-14",\N,"http://en.wikipedia.org/wiki/2002_San_Marino_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 128,2002,5,4,"Spanish Grand Prix","2002-04-28",\N,"http://en.wikipedia.org/wiki/2002_Spanish_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-129,2002,6,23,"Austrian Grand Prix","2002-05-12",\N,"http://en.wikipedia.org/wiki/2002_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+129,2002,6,70,"Austrian Grand Prix","2002-05-12",\N,"http://en.wikipedia.org/wiki/2002_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 130,2002,7,6,"Monaco Grand Prix","2002-05-26",\N,"http://en.wikipedia.org/wiki/2002_Monaco_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 131,2002,8,7,"Canadian Grand Prix","2002-06-09",\N,"http://en.wikipedia.org/wiki/2002_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 132,2002,9,20,"European Grand Prix","2002-06-23",\N,"http://en.wikipedia.org/wiki/2002_European_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -144,7 +144,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 143,2001,3,18,"Brazilian Grand Prix","2001-04-01",\N,"http://en.wikipedia.org/wiki/2001_Brazilian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 144,2001,4,21,"San Marino Grand Prix","2001-04-15",\N,"http://en.wikipedia.org/wiki/2001_San_Marino_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 145,2001,5,4,"Spanish Grand Prix","2001-04-29",\N,"http://en.wikipedia.org/wiki/2001_Spanish_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-146,2001,6,23,"Austrian Grand Prix","2001-05-13",\N,"http://en.wikipedia.org/wiki/2001_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+146,2001,6,70,"Austrian Grand Prix","2001-05-13",\N,"http://en.wikipedia.org/wiki/2001_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 147,2001,7,6,"Monaco Grand Prix","2001-05-27",\N,"http://en.wikipedia.org/wiki/2001_Monaco_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 148,2001,8,7,"Canadian Grand Prix","2001-06-10",\N,"http://en.wikipedia.org/wiki/2001_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 149,2001,9,20,"European Grand Prix","2001-06-24",\N,"http://en.wikipedia.org/wiki/2001_European_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -165,7 +165,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 164,2000,7,6,"Monaco Grand Prix","2000-06-04",\N,"http://en.wikipedia.org/wiki/2000_Monaco_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 165,2000,8,7,"Canadian Grand Prix","2000-06-18",\N,"http://en.wikipedia.org/wiki/2000_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 166,2000,9,8,"French Grand Prix","2000-07-02",\N,"http://en.wikipedia.org/wiki/2000_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-167,2000,10,23,"Austrian Grand Prix","2000-07-16",\N,"http://en.wikipedia.org/wiki/2000_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+167,2000,10,70,"Austrian Grand Prix","2000-07-16",\N,"http://en.wikipedia.org/wiki/2000_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 168,2000,11,10,"German Grand Prix","2000-07-30",\N,"http://en.wikipedia.org/wiki/2000_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 169,2000,12,11,"Hungarian Grand Prix","2000-08-13",\N,"http://en.wikipedia.org/wiki/2000_Hungarian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 170,2000,13,13,"Belgian Grand Prix","2000-08-27",\N,"http://en.wikipedia.org/wiki/2000_Belgian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -181,7 +181,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 180,1999,6,7,"Canadian Grand Prix","1999-06-13",\N,"http://en.wikipedia.org/wiki/1999_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 181,1999,7,8,"French Grand Prix","1999-06-27",\N,"http://en.wikipedia.org/wiki/1999_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 182,1999,8,9,"British Grand Prix","1999-07-11",\N,"http://en.wikipedia.org/wiki/1999_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-183,1999,9,23,"Austrian Grand Prix","1999-07-25",\N,"http://en.wikipedia.org/wiki/1999_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+183,1999,9,70,"Austrian Grand Prix","1999-07-25",\N,"http://en.wikipedia.org/wiki/1999_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 184,1999,10,10,"German Grand Prix","1999-08-01",\N,"http://en.wikipedia.org/wiki/1999_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 185,1999,11,11,"Hungarian Grand Prix","1999-08-15",\N,"http://en.wikipedia.org/wiki/1999_Hungarian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 186,1999,12,13,"Belgian Grand Prix","1999-08-29",\N,"http://en.wikipedia.org/wiki/1999_Belgian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -198,7 +198,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 197,1998,7,7,"Canadian Grand Prix","1998-06-07",\N,"http://en.wikipedia.org/wiki/1998_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 198,1998,8,8,"French Grand Prix","1998-06-28",\N,"http://en.wikipedia.org/wiki/1998_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 199,1998,9,9,"British Grand Prix","1998-07-12",\N,"http://en.wikipedia.org/wiki/1998_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-200,1998,10,23,"Austrian Grand Prix","1998-07-26",\N,"http://en.wikipedia.org/wiki/1998_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+200,1998,10,70,"Austrian Grand Prix","1998-07-26",\N,"http://en.wikipedia.org/wiki/1998_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 201,1998,11,10,"German Grand Prix","1998-08-02",\N,"http://en.wikipedia.org/wiki/1998_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 202,1998,12,11,"Hungarian Grand Prix","1998-08-16",\N,"http://en.wikipedia.org/wiki/1998_Hungarian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 203,1998,13,13,"Belgian Grand Prix","1998-08-30",\N,"http://en.wikipedia.org/wiki/1998_Belgian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -218,7 +218,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 217,1997,11,11,"Hungarian Grand Prix","1997-08-10",\N,"http://en.wikipedia.org/wiki/1997_Hungarian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 218,1997,12,13,"Belgian Grand Prix","1997-08-24",\N,"http://en.wikipedia.org/wiki/1997_Belgian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 219,1997,13,14,"Italian Grand Prix","1997-09-07",\N,"http://en.wikipedia.org/wiki/1997_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-220,1997,14,23,"Austrian Grand Prix","1997-09-21",\N,"http://en.wikipedia.org/wiki/1997_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+220,1997,14,70,"Austrian Grand Prix","1997-09-21",\N,"http://en.wikipedia.org/wiki/1997_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 221,1997,15,20,"Luxembourg Grand Prix","1997-09-28",\N,"http://en.wikipedia.org/wiki/1997_Luxembourg_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 222,1997,16,22,"Japanese Grand Prix","1997-10-12",\N,"http://en.wikipedia.org/wiki/1997_Japanese_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 223,1997,17,26,"European Grand Prix","1997-10-26",\N,"http://en.wikipedia.org/wiki/1997_European_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -395,7 +395,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 394,1987,7,9,"British Grand Prix","1987-07-12",\N,"http://en.wikipedia.org/wiki/1987_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 395,1987,8,10,"German Grand Prix","1987-07-26",\N,"http://en.wikipedia.org/wiki/1987_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 396,1987,9,11,"Hungarian Grand Prix","1987-08-09",\N,"http://en.wikipedia.org/wiki/1987_Hungarian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-397,1987,10,23,"Austrian Grand Prix","1987-08-16",\N,"http://en.wikipedia.org/wiki/1987_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+397,1987,10,70,"Austrian Grand Prix","1987-08-16",\N,"http://en.wikipedia.org/wiki/1987_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 398,1987,11,14,"Italian Grand Prix","1987-09-06",\N,"http://en.wikipedia.org/wiki/1987_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 399,1987,12,27,"Portuguese Grand Prix","1987-09-20",\N,"http://en.wikipedia.org/wiki/1987_Portuguese_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 400,1987,13,26,"Spanish Grand Prix","1987-09-27",\N,"http://en.wikipedia.org/wiki/1987_Spanish_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -413,7 +413,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 412,1986,9,38,"British Grand Prix","1986-07-13",\N,"http://en.wikipedia.org/wiki/1986_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 413,1986,10,10,"German Grand Prix","1986-07-27",\N,"http://en.wikipedia.org/wiki/1986_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 414,1986,11,11,"Hungarian Grand Prix","1986-08-10",\N,"http://en.wikipedia.org/wiki/1986_Hungarian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-415,1986,12,23,"Austrian Grand Prix","1986-08-17",\N,"http://en.wikipedia.org/wiki/1986_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+415,1986,12,70,"Austrian Grand Prix","1986-08-17",\N,"http://en.wikipedia.org/wiki/1986_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 416,1986,13,14,"Italian Grand Prix","1986-09-07",\N,"http://en.wikipedia.org/wiki/1986_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 417,1986,14,27,"Portuguese Grand Prix","1986-09-21",\N,"http://en.wikipedia.org/wiki/1986_Portuguese_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 418,1986,15,32,"Mexican Grand Prix","1986-10-12",\N,"http://en.wikipedia.org/wiki/1986_Mexican_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -427,7 +427,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 426,1985,7,34,"French Grand Prix","1985-07-07",\N,"http://en.wikipedia.org/wiki/1985_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 427,1985,8,9,"British Grand Prix","1985-07-21",\N,"http://en.wikipedia.org/wiki/1985_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 428,1985,9,20,"German Grand Prix","1985-08-04",\N,"http://en.wikipedia.org/wiki/1985_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-429,1985,10,23,"Austrian Grand Prix","1985-08-18",\N,"http://en.wikipedia.org/wiki/1985_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+429,1985,10,70,"Austrian Grand Prix","1985-08-18",\N,"http://en.wikipedia.org/wiki/1985_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 430,1985,11,39,"Dutch Grand Prix","1985-08-25",\N,"http://en.wikipedia.org/wiki/1985_Dutch_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 431,1985,12,14,"Italian Grand Prix","1985-09-08",\N,"http://en.wikipedia.org/wiki/1985_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 432,1985,13,13,"Belgian Grand Prix","1985-09-15",\N,"http://en.wikipedia.org/wiki/1985_Belgian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -445,7 +445,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 444,1984,9,42,"Dallas Grand Prix","1984-07-08",\N,"http://en.wikipedia.org/wiki/1984_Dallas_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 445,1984,10,38,"British Grand Prix","1984-07-22",\N,"http://en.wikipedia.org/wiki/1984_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 446,1984,11,10,"German Grand Prix","1984-08-05",\N,"http://en.wikipedia.org/wiki/1984_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-447,1984,12,23,"Austrian Grand Prix","1984-08-19",\N,"http://en.wikipedia.org/wiki/1984_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+447,1984,12,70,"Austrian Grand Prix","1984-08-19",\N,"http://en.wikipedia.org/wiki/1984_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 448,1984,13,39,"Dutch Grand Prix","1984-08-26",\N,"http://en.wikipedia.org/wiki/1984_Dutch_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 449,1984,14,14,"Italian Grand Prix","1984-09-09",\N,"http://en.wikipedia.org/wiki/1984_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 450,1984,15,20,"European Grand Prix","1984-10-07",\N,"http://en.wikipedia.org/wiki/1984_European_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -460,7 +460,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 459,1983,8,7,"Canadian Grand Prix","1983-06-12",\N,"http://en.wikipedia.org/wiki/1983_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 460,1983,9,9,"British Grand Prix","1983-07-16",\N,"http://en.wikipedia.org/wiki/1983_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 461,1983,10,10,"German Grand Prix","1983-08-07",\N,"http://en.wikipedia.org/wiki/1983_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-462,1983,11,23,"Austrian Grand Prix","1983-08-14",\N,"http://en.wikipedia.org/wiki/1983_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+462,1983,11,70,"Austrian Grand Prix","1983-08-14",\N,"http://en.wikipedia.org/wiki/1983_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 463,1983,12,39,"Dutch Grand Prix","1983-08-28",\N,"http://en.wikipedia.org/wiki/1983_Dutch_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 464,1983,13,14,"Italian Grand Prix","1983-09-11",\N,"http://en.wikipedia.org/wiki/1983_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 465,1983,14,38,"European Grand Prix","1983-09-25",\N,"http://en.wikipedia.org/wiki/1983_European_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -477,7 +477,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 476,1982,10,38,"British Grand Prix","1982-07-18",\N,"http://en.wikipedia.org/wiki/1982_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 477,1982,11,34,"French Grand Prix","1982-07-25",\N,"http://en.wikipedia.org/wiki/1982_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 478,1982,12,10,"German Grand Prix","1982-08-08",\N,"http://en.wikipedia.org/wiki/1982_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-479,1982,13,23,"Austrian Grand Prix","1982-08-15",\N,"http://en.wikipedia.org/wiki/1982_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+479,1982,13,70,"Austrian Grand Prix","1982-08-15",\N,"http://en.wikipedia.org/wiki/1982_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 480,1982,14,41,"Swiss Grand Prix","1982-08-29",\N,"http://en.wikipedia.org/wiki/1982_Swiss_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 481,1982,15,14,"Italian Grand Prix","1982-09-12",\N,"http://en.wikipedia.org/wiki/1982_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 482,1982,16,44,"Caesars Palace Grand Prix","1982-09-25",\N,"http://en.wikipedia.org/wiki/1982_Caesars_Palace_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -491,7 +491,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 490,1981,8,41,"French Grand Prix","1981-07-05",\N,"http://en.wikipedia.org/wiki/1981_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 491,1981,9,9,"British Grand Prix","1981-07-18",\N,"http://en.wikipedia.org/wiki/1981_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 492,1981,10,10,"German Grand Prix","1981-08-02",\N,"http://en.wikipedia.org/wiki/1981_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-493,1981,11,23,"Austrian Grand Prix","1981-08-16",\N,"http://en.wikipedia.org/wiki/1981_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+493,1981,11,70,"Austrian Grand Prix","1981-08-16",\N,"http://en.wikipedia.org/wiki/1981_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 494,1981,12,39,"Dutch Grand Prix","1981-08-30",\N,"http://en.wikipedia.org/wiki/1981_Dutch_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 495,1981,13,14,"Italian Grand Prix","1981-09-13",\N,"http://en.wikipedia.org/wiki/1981_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 496,1981,14,7,"Canadian Grand Prix","1981-09-27",\N,"http://en.wikipedia.org/wiki/1981_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -505,7 +505,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 504,1980,7,34,"French Grand Prix","1980-06-29",\N,"http://en.wikipedia.org/wiki/1980_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 505,1980,8,38,"British Grand Prix","1980-07-13",\N,"http://en.wikipedia.org/wiki/1980_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 506,1980,9,10,"German Grand Prix","1980-08-10",\N,"http://en.wikipedia.org/wiki/1980_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-507,1980,10,23,"Austrian Grand Prix","1980-08-17",\N,"http://en.wikipedia.org/wiki/1980_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+507,1980,10,70,"Austrian Grand Prix","1980-08-17",\N,"http://en.wikipedia.org/wiki/1980_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 508,1980,11,39,"Dutch Grand Prix","1980-08-31",\N,"http://en.wikipedia.org/wiki/1980_Dutch_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 509,1980,12,21,"Italian Grand Prix","1980-09-14",\N,"http://en.wikipedia.org/wiki/1980_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 510,1980,13,7,"Canadian Grand Prix","1980-09-28",\N,"http://en.wikipedia.org/wiki/1980_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -520,7 +520,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 519,1979,8,41,"French Grand Prix","1979-07-01",\N,"http://en.wikipedia.org/wiki/1979_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 520,1979,9,9,"British Grand Prix","1979-07-14",\N,"http://en.wikipedia.org/wiki/1979_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 521,1979,10,10,"German Grand Prix","1979-07-29",\N,"http://en.wikipedia.org/wiki/1979_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-522,1979,11,23,"Austrian Grand Prix","1979-08-12",\N,"http://en.wikipedia.org/wiki/1979_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+522,1979,11,70,"Austrian Grand Prix","1979-08-12",\N,"http://en.wikipedia.org/wiki/1979_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 523,1979,12,39,"Dutch Grand Prix","1979-08-26",\N,"http://en.wikipedia.org/wiki/1979_Dutch_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 524,1979,13,14,"Italian Grand Prix","1979-09-09",\N,"http://en.wikipedia.org/wiki/1979_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 525,1979,14,7,"Canadian Grand Prix","1979-09-30",\N,"http://en.wikipedia.org/wiki/1979_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -536,7 +536,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 535,1978,9,34,"French Grand Prix","1978-07-02",\N,"http://en.wikipedia.org/wiki/1978_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 536,1978,10,38,"British Grand Prix","1978-07-16",\N,"http://en.wikipedia.org/wiki/1978_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 537,1978,11,10,"German Grand Prix","1978-07-30",\N,"http://en.wikipedia.org/wiki/1978_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-538,1978,12,23,"Austrian Grand Prix","1978-08-13",\N,"http://en.wikipedia.org/wiki/1978_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+538,1978,12,70,"Austrian Grand Prix","1978-08-13",\N,"http://en.wikipedia.org/wiki/1978_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 539,1978,13,39,"Dutch Grand Prix","1978-08-27",\N,"http://en.wikipedia.org/wiki/1978_Dutch_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 540,1978,14,14,"Italian Grand Prix","1978-09-10",\N,"http://en.wikipedia.org/wiki/1978_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 541,1978,15,46,"United States Grand Prix","1978-10-01",\N,"http://en.wikipedia.org/wiki/1978_United_States_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -552,7 +552,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 551,1977,9,41,"French Grand Prix","1977-07-03",\N,"http://en.wikipedia.org/wiki/1977_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 552,1977,10,9,"British Grand Prix","1977-07-16",\N,"http://en.wikipedia.org/wiki/1977_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 553,1977,11,10,"German Grand Prix","1977-07-31",\N,"http://en.wikipedia.org/wiki/1977_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-554,1977,12,23,"Austrian Grand Prix","1977-08-14",\N,"http://en.wikipedia.org/wiki/1977_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+554,1977,12,70,"Austrian Grand Prix","1977-08-14",\N,"http://en.wikipedia.org/wiki/1977_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 555,1977,13,39,"Dutch Grand Prix","1977-08-28",\N,"http://en.wikipedia.org/wiki/1977_Dutch_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 556,1977,14,14,"Italian Grand Prix","1977-09-11",\N,"http://en.wikipedia.org/wiki/1977_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 557,1977,15,46,"United States Grand Prix","1977-10-02",\N,"http://en.wikipedia.org/wiki/1977_United_States_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -568,7 +568,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 567,1976,8,34,"French Grand Prix","1976-07-04",\N,"http://en.wikipedia.org/wiki/1976_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 568,1976,9,38,"British Grand Prix","1976-07-18",\N,"http://en.wikipedia.org/wiki/1976_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 569,1976,10,20,"German Grand Prix","1976-08-01",\N,"http://en.wikipedia.org/wiki/1976_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-570,1976,11,23,"Austrian Grand Prix","1976-08-15",\N,"http://en.wikipedia.org/wiki/1976_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+570,1976,11,70,"Austrian Grand Prix","1976-08-15",\N,"http://en.wikipedia.org/wiki/1976_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 571,1976,12,39,"Dutch Grand Prix","1976-08-29",\N,"http://en.wikipedia.org/wiki/1976_Dutch_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 572,1976,13,14,"Italian Grand Prix","1976-09-12",\N,"http://en.wikipedia.org/wiki/1976_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 573,1976,14,48,"Canadian Grand Prix","1976-10-03",\N,"http://en.wikipedia.org/wiki/1976_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -585,7 +585,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 584,1975,9,34,"French Grand Prix","1975-07-06",\N,"http://en.wikipedia.org/wiki/1975_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 585,1975,10,9,"British Grand Prix","1975-07-19",\N,"http://en.wikipedia.org/wiki/1975_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 586,1975,11,20,"German Grand Prix","1975-08-03",\N,"http://en.wikipedia.org/wiki/1975_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-587,1975,12,23,"Austrian Grand Prix","1975-08-17",\N,"http://en.wikipedia.org/wiki/1975_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+587,1975,12,70,"Austrian Grand Prix","1975-08-17",\N,"http://en.wikipedia.org/wiki/1975_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 588,1975,13,14,"Italian Grand Prix","1975-09-07",\N,"http://en.wikipedia.org/wiki/1975_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 589,1975,14,46,"United States Grand Prix","1975-10-05",\N,"http://en.wikipedia.org/wiki/1975_United_States_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 590,1974,1,25,"Argentine Grand Prix","1974-01-13",\N,"http://en.wikipedia.org/wiki/1974_Argentine_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -599,7 +599,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 598,1974,9,41,"French Grand Prix","1974-07-07",\N,"http://en.wikipedia.org/wiki/1974_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 599,1974,10,38,"British Grand Prix","1974-07-20",\N,"http://en.wikipedia.org/wiki/1974_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 600,1974,11,20,"German Grand Prix","1974-08-04",\N,"http://en.wikipedia.org/wiki/1974_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-601,1974,12,23,"Austrian Grand Prix","1974-08-18",\N,"http://en.wikipedia.org/wiki/1974_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+601,1974,12,70,"Austrian Grand Prix","1974-08-18",\N,"http://en.wikipedia.org/wiki/1974_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 602,1974,13,14,"Italian Grand Prix","1974-09-08",\N,"http://en.wikipedia.org/wiki/1974_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 603,1974,14,48,"Canadian Grand Prix","1974-09-22",\N,"http://en.wikipedia.org/wiki/1974_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 604,1974,15,46,"United States Grand Prix","1974-10-06",\N,"http://en.wikipedia.org/wiki/1974_United_States_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -614,7 +614,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 613,1973,9,9,"British Grand Prix","1973-07-14",\N,"http://en.wikipedia.org/wiki/1973_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 614,1973,10,39,"Dutch Grand Prix","1973-07-29",\N,"http://en.wikipedia.org/wiki/1973_Dutch_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 615,1973,11,20,"German Grand Prix","1973-08-05",\N,"http://en.wikipedia.org/wiki/1973_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-616,1973,12,23,"Austrian Grand Prix","1973-08-19",\N,"http://en.wikipedia.org/wiki/1973_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+616,1973,12,70,"Austrian Grand Prix","1973-08-19",\N,"http://en.wikipedia.org/wiki/1973_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 617,1973,13,14,"Italian Grand Prix","1973-09-09",\N,"http://en.wikipedia.org/wiki/1973_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 618,1973,14,48,"Canadian Grand Prix","1973-09-23",\N,"http://en.wikipedia.org/wiki/1973_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 619,1973,15,46,"United States Grand Prix","1973-10-07",\N,"http://en.wikipedia.org/wiki/1973_United_States_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -626,7 +626,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 625,1972,6,51,"French Grand Prix","1972-07-02",\N,"http://en.wikipedia.org/wiki/1972_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 626,1972,7,38,"British Grand Prix","1972-07-15",\N,"http://en.wikipedia.org/wiki/1972_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 627,1972,8,20,"German Grand Prix","1972-07-30",\N,"http://en.wikipedia.org/wiki/1972_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-628,1972,9,23,"Austrian Grand Prix","1972-08-13",\N,"http://en.wikipedia.org/wiki/1972_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+628,1972,9,70,"Austrian Grand Prix","1972-08-13",\N,"http://en.wikipedia.org/wiki/1972_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 629,1972,10,14,"Italian Grand Prix","1972-09-10",\N,"http://en.wikipedia.org/wiki/1972_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 630,1972,11,48,"Canadian Grand Prix","1972-09-24",\N,"http://en.wikipedia.org/wiki/1972_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 631,1972,12,46,"United States Grand Prix","1972-10-08",\N,"http://en.wikipedia.org/wiki/1972_United_States_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -637,7 +637,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 636,1971,5,34,"French Grand Prix","1971-07-04",\N,"http://en.wikipedia.org/wiki/1971_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 637,1971,6,9,"British Grand Prix","1971-07-17",\N,"http://en.wikipedia.org/wiki/1971_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 638,1971,7,20,"German Grand Prix","1971-08-01",\N,"http://en.wikipedia.org/wiki/1971_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-639,1971,8,23,"Austrian Grand Prix","1971-08-15",\N,"http://en.wikipedia.org/wiki/1971_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+639,1971,8,70,"Austrian Grand Prix","1971-08-15",\N,"http://en.wikipedia.org/wiki/1971_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 640,1971,9,14,"Italian Grand Prix","1971-09-05",\N,"http://en.wikipedia.org/wiki/1971_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 641,1971,10,48,"Canadian Grand Prix","1971-09-19",\N,"http://en.wikipedia.org/wiki/1971_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 642,1971,11,46,"United States Grand Prix","1971-10-03",\N,"http://en.wikipedia.org/wiki/1971_United_States_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
@@ -649,7 +649,7 @@ raceId,year,round,circuitId,name,date,time,url,fp1_date,fp1_time,fp2_date,fp2_ti
 648,1970,6,51,"French Grand Prix","1970-07-05",\N,"http://en.wikipedia.org/wiki/1970_French_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 649,1970,7,38,"British Grand Prix","1970-07-18",\N,"http://en.wikipedia.org/wiki/1970_British_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 650,1970,8,10,"German Grand Prix","1970-08-02",\N,"http://en.wikipedia.org/wiki/1970_German_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
-651,1970,9,23,"Austrian Grand Prix","1970-08-16",\N,"http://en.wikipedia.org/wiki/1970_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
+651,1970,9,70,"Austrian Grand Prix","1970-08-16",\N,"http://en.wikipedia.org/wiki/1970_Austrian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 652,1970,10,14,"Italian Grand Prix","1970-09-06",\N,"http://en.wikipedia.org/wiki/1970_Italian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 653,1970,11,52,"Canadian Grand Prix","1970-09-20",\N,"http://en.wikipedia.org/wiki/1970_Canadian_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
 654,1970,12,46,"United States Grand Prix","1970-10-04",\N,"http://en.wikipedia.org/wiki/1970_United_States_Grand_Prix",\N,\N,\N,\N,\N,\N,\N,\N,\N,\N
