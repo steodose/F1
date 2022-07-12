@@ -225,6 +225,8 @@ driver_points_plot <- driver_results_2022 %>%
     theme_custom() + 
   #theme(plot.margin = margin(25, 25, 10, 25)) +
     theme(panel.grid.major.x = element_blank(),
+          axis.text.x = element_text(face="bold"),
+          axis.text.y = element_text(face="bold"),
           plot.title = element_text(face = 'bold', size = 16), 
           plot.title.position = 'plot') +
     coord_flip() +
@@ -291,6 +293,8 @@ constructor_points_plot <- constructor_points_df %>%
     scale_y_continuous(breaks = scales::pretty_breaks(n = 20)) +
     theme_custom() + 
     theme(panel.grid.major.x = element_blank(),
+          axis.text.x = element_text(face="bold"),
+          axis.text.y = element_text(face="bold"),
           plot.title = element_text(face = 'bold', size = 16), 
           plot.title.position = 'plot') + 
     coord_flip() +
@@ -339,13 +343,15 @@ constructor_lineplot <- constructor_points2 %>%
     labs(x = "Race",
          y = "Cumulative F1 Points",
          title = "The Race for the Constructors' Title",
-         subtitle = "Cumulative points earned for each team by race. <span style = 'color:#00D2BE;'>**Mercedes**</span>, <span style = 'color:#FF9B00;'>**Red Bull**</span> and <span style = 'color:#FF2800;'>**Ferrari**</span> are highlighted since the Championship will likely come down to them.",
+         subtitle = "Cumulative points earned for each team by race. <span style = 'color:#00D2BE;'>**Mercedes**</span>, <span style = 'color:#FF9B00;'>**Red Bull**</span> and <span style = 'color:#FF2800;'>**Ferrari**</span> are highlighted.",
          caption = "Data source: Ergast API
          Plot: @steodosescu") +
     theme_custom() +
   scale_x_continuous(breaks=seq(0, 22, 1)) +
     theme(plot.title = element_text(face = "bold"),
           plot.subtitle = element_markdown(),
+          axis.text.x = element_text(face="bold"),
+          axis.text.y = element_text(face="bold"),
           legend.position = "none")
 
 constructor_lineplot
