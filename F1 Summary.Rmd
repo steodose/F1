@@ -240,9 +240,10 @@ vi_clean <- vi_clean %>%
 vi_clean$driver_constructor <- str_remove(vi_clean$driver_constructor, "[+]")
 vi_clean$driver_constructor <- str_remove(vi_clean$driver_constructor, "[-]")
 
+# create implied odds calculation...need special condition for Max Verstappen since he is favored at this point in the season
 vi_clean <- vi_clean %>% 
-    type_convert() %>% 
-    mutate(implied_odds = 1-champ_odds/(champ_odds+100))
+    type_convert() %>%
+  mutate(implied_odds = if_else(driver_constructor == "Max Verstappen", 1 - (100/champ_odds), 1-champ_odds/(champ_odds+100)))
 
 # split drivers and constructors
 vi_drivers <- vi_clean %>% 
@@ -254,6 +255,7 @@ vi_drivers <- vi_drivers %>%
   mutate(driver = case_when(
         driver == "Sergio Perez" ~ "Sergio Pérez",
         driver == "Alex Albon" ~ "Alexander Albon",
+        driver == "Fernando Alonso" ~ "Fernando Alonzo",
         TRUE ~ driver
     ))
 
@@ -283,6 +285,7 @@ vi_clean_race <- vi_clean_race %>%
   mutate(driver = case_when(
         driver == "Sergio Perez" ~ "Sergio Pérez",
         driver == "Alex Albon" ~ "Alexander Albon",
+        driver == "Fernando Alonso" ~ "Fernando Alonzo",
         TRUE ~ driver
     ))
 
