@@ -517,3 +517,43 @@ boxplot_with_logo <- add_logo(
 # save the image and write to working directory
 magick::image_write(boxplot_with_logo, "Constructors Boxplot Plot with Logo.png")
 
+
+## 5. Race Results Table
+
+# pivot wider and clean up df
+races_table_wider <- races_2022 %>% 
+    select(round, name.x, date, driverId, constructorId, positionOrder, driverRef, forename, surname, name.y) %>%
+    rename(race = name.x, constructor = name.y) %>%
+    mutate(driver = str_c(forename, surname, sep = " ")) %>% 
+    select(-c(round, date, constructorId, driverId, driverRef:constructor)) %>% 
+    pivot_wider(names_from = race,
+                values_from = driver) 
+
+# create gt table
+race_results_table <- races_table_wider %>%
+    gt() %>% 
+    cols_label(
+        positionOrder = ""
+    ) %>% 
+    data_color(
+        columns = everything(),
+        colors = scales::col_factor(
+            palette = c("#FF9B00", "#FF9B00", "#FF2800", "#FF2800", "#00D2BE", "#00D2BE", "#f98e1d", "#005BA9", "#981E32", "#005BA9", "#F62039", "#f98e1d", "#00293F", "#00352F","#F62039", "#00293F", "#981E32", "#00352F", "#00A3E0", "#00A3E0", "#00352F"), 
+            domain = c('Max Verstappen', 'Sergio Pérez', 'Charles Leclerc', 'Carlos Sainz', 'Lewis Hamilton', 'George Russell', 'Lando Norris', 'Esteban Ocon', 'Valtteri Bottas', 'Fernando Alonso', 'Kevin Magnussen', 'Daniel Ricciardo', 'Pierre Gasly', 'Sebastian Vettel', 'Mick Schumacher', 'Yuki Tsunoda', 'Guanyu Zhou', 'Lance Stroll', 'Alexander Albon', 'Nicholas Latifi', 'Nico Hülkenberg'),
+            na.color = "white",
+            ordered = TRUE
+        )
+    ) %>% 
+    fmt_missing(
+        columns = everything(),
+        rows = everything(),
+        missing_text = "---"
+    ) %>% 
+    gt_theme_538() %>%
+    tab_header(title = md("**2022 Forumula 1 World Championship**"),
+               subtitle =glue("Race results as of {latest_race}.")) %>%
+    tab_source_note(
+        source_note = md("Data: Ergast API<br>Table: @steodosescu"))
+
+race_results_table %>%
+    gtsave("Race Results Table.png")
