@@ -285,7 +285,6 @@ vi_clean_race <- vi_clean_race %>%
   mutate(driver = case_when(
         driver == "Sergio Perez" ~ "Sergio Pérez",
         driver == "Alex Albon" ~ "Alexander Albon",
-        driver == "Fernando Alonso" ~ "Fernando Alonzo",
         TRUE ~ driver
     ))
 
