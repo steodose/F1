@@ -311,7 +311,7 @@ race_results_table <- races_table_wider %>%
         missing_text = "---"
     ) %>% 
     gt_theme_538() %>%
-    tab_header(title = md("**2022 Forumula 1 World Championships**"),
+    tab_header(title = md("**2022 Formula 1 World Championships**"),
                subtitle =glue("Race results as of {latest_race}.")) %>%
     tab_source_note(
         source_note = md("Data: Ergast API<br>Table: @steodosescu"))
