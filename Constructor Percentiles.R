@@ -158,7 +158,7 @@ races_2022 <- left_join(races_2022, constructors, by = "constructorId")
 #create percentile rankings
 race_percentiles <- races_2022 %>%
     group_by(constructorRef) %>% 
-    summarise(avg_finish = median(positionOrder)) %>% 
+    summarise(avg_finish = mean(positionOrder)) %>% 
     mutate(percentile = 1-(avg_finish/20)) %>% 
     arrange(avg_finish) %>% 
     mutate(rank = row_number()) %>% 
@@ -175,7 +175,7 @@ qualifying_2022 <- qualifying %>%
 
 qualifying_percentiles <- qualifying_2022 %>% 
     group_by(constructorRef) %>% 
-    summarise(avg_qual_finish = median(position)) %>% 
+    summarise(avg_qual_finish = mean(position)) %>% 
     mutate(qual_percentile = 1-(avg_qual_finish/20)) %>% 
     arrange(avg_qual_finish)
 
@@ -216,7 +216,7 @@ percentiles_df %>%
     geom_dumbbell(aes(x = avg_qual_finish, xend = avg_finish, y = constructor), 
                   color = NA, size_x = 5, size_xend = 5, colour_x = "#2E86C1", colour_xend = "#CB4335") +
     labs(title = "**Ferrari is underperforming its grid positioning**", 
-         subtitle = glue("Difference between each F1 team's median <span style = 'color:#2E86C1'>**grid starting position**</span> and <span style = 'color:#CB4335'>**race finish**</span>. Data as of **{latest_race}** races."),
+         subtitle = glue("Difference between each F1 team's average <span style = 'color:#2E86C1'>**grid starting position**</span> and <span style = 'color:#CB4335'>**race finish**</span>. Data as of **{latest_race}** races."),
          caption = "Data: Ergast API\nGraphic: @steodosescu", 
          x = "Average Position",
          y = "") +
@@ -237,7 +237,7 @@ percentiles_df %>%
     theme(plot.title = element_markdown()) +
     theme(plot.subtitle = element_markdown())
 
-ggsave("Construrctors Dumbbell Plot.png")
+ggsave("Constructors Dumbbell Plot.png")
 
 # Add logo to plot
 basic_dumbbell_with_logo <- add_logo(
@@ -491,7 +491,8 @@ combined_long %>%
           plot.subtitle = element_text(
               margin = margin(t = 3, b = 2, unit = "mm"),
               hjust = 0.5
-          )) +
+          ),
+          panel.grid.major = element_blank()) +
     scale_y_reverse() +
     labs(x = "", y = "Position",
          title = "Ferrari's Strategy: Go Big or Go Home",
@@ -531,6 +532,7 @@ races_table_wider <- races_2022 %>%
 
 # create gt table
 race_results_table <- races_table_wider %>%
+    select(positionOrder:`Hungarian Grand Prix`) %>% 
     gt() %>% 
     cols_label(
         positionOrder = ""
@@ -550,10 +552,13 @@ race_results_table <- races_table_wider %>%
         missing_text = "---"
     ) %>% 
     gt_theme_538() %>%
-    tab_header(title = md("**2022 Forumula 1 World Championship**"),
+    tab_header(title = md("**2022 Formula 1 World Championship**"),
                subtitle =glue("Race results as of {latest_race}.")) %>%
+    tab_options(heading.title.font.size = 20,
+                heading.subtitle.font.size = 14,
+                ) %>% 
     tab_source_note(
         source_note = md("Data: Ergast API<br>Table: @steodosescu"))
 
 race_results_table %>%
-    gtsave("Race Results Table.png")
+    gtsave("Race Results Table.png", vwidth = 1300)

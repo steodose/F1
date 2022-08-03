@@ -321,7 +321,7 @@ race_results_table
 
 ```
 
-
+---
 
 ### Constructors Trends
 
