@@ -1,8 +1,8 @@
 name: "Yay internet!"
 output_dir: "."
 navbar:
-  title: "F1 Analytics"
-  right:
+  title: "<img id=\"logo\" style=\"width: 48px;\" src=\"F1_logo5.png\" />"
+  left:
     - text: "Summary"
       href: F1-Summary.html
     - text: "Trends"
@@ -11,6 +11,7 @@ navbar:
       href: Races.html
     - text: "About"
       href: About.html
+  right: 
     - icon: fa-home fa-lg
       href: https://stephanteodosescu.com/      
     - icon: fa-twitter fa-lg
