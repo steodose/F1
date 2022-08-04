@@ -41,6 +41,7 @@ library(scales)
 library(jsonlite)
 library(httr)
 library(extrafont)
+library(plotly)
 
 
 #read in the data using read_csv
@@ -226,6 +227,9 @@ latest_race <- max(driver_results_2022$date)
 
 ### Drivers Trends
 
+<br>
+<br>
+
 ```{r, echo = FALSE}
 
 driver_points_plot <- driver_results_2022 %>% 
@@ -249,7 +253,7 @@ driver_points_plot <- driver_results_2022 %>%
     theme(panel.grid.major.x = element_blank(),
           axis.text.x = element_text(face="bold"),
           axis.text.y = element_text(face="bold"),
-          plot.title = element_text(face = 'bold', size = 16), 
+          plot.title = element_text(face = 'bold', size = 20), 
           plot.title.position = 'plot') +
     coord_flip() +
     theme(legend.position = "none") +
@@ -263,6 +267,9 @@ driver_points_plot
 
 ```
 
+
+<br>
+<br>
 
 Race Results Table
 
@@ -311,8 +318,9 @@ race_results_table <- races_table_wider %>%
         missing_text = "---"
     ) %>% 
     gt_theme_538() %>%
-    tab_header(title = md("**2022 Formula 1 World Championships**"),
+    tab_header(title = md("**2022 Formula 1 World Championship**"),
                subtitle =glue("Race results as of {latest_race}.")) %>%
+  tab_options(  table.font.size = 20) %>%
     tab_source_note(
         source_note = md("Data: Ergast API<br>Table: @steodosescu"))
 
@@ -322,6 +330,9 @@ race_results_table
 ```
 
 ---
+
+<br>
+<br>
 
 ### Constructors Trends
 
@@ -376,7 +387,7 @@ constructor_points_plot <- constructor_points_df %>%
     theme(panel.grid.major.x = element_blank(),
           axis.text.x = element_text(face="bold"),
           axis.text.y = element_text(face="bold"),
-          plot.title = element_text(face = 'bold', size = 16), 
+          plot.title = element_text(face = 'bold', size = 20), 
           plot.title.position = 'plot') + 
     coord_flip() +
     theme(legend.position = "none") +
@@ -390,6 +401,42 @@ constructor_points_plot
 
 ```
 
+<br>
+<br>
+
+```{r}
+
+## constructors finishes boxplot
+
+# Define function to link to images
+link_to_img <- function(x, width = 30) {
+    glue::glue("<img src='{x}' width='{width}'/>")
+}
+
+
+races_boxplot <- driver_results_2022 %>% 
+  mutate('constructor_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/manufacturers/', constructor, '.png')) %>%
+    mutate(logos = link_to_img(constructor_logo)) %>% 
+    #mutate(constructor = fct_reorder(constructor, position)) %>%
+    ggplot(aes(x = fct_reorder(constructor, position), y = position, group = constructor)) +
+    geom_boxplot(color = "#2E86C1", fill="#2E86C1", alpha=0.2) +
+    theme_custom() +
+    theme(panel.background = element_rect(fill = "floralwhite", color = "floralwhite")) +
+    labs(x = "", y = "Race Finish Position",
+         title = "Distribution of Race Finishes",
+         subtitle = glue("Distribution of race finishes for each F1 team in 2022. Data thru **{latest_race}** races."),
+         caption = "Data: Ergast API\nGraphic: @steodosescu") +
+    theme(plot.title = element_text(face = "bold", size = 20)) +
+    theme(plot.title = element_markdown()) +
+    theme(plot.subtitle = element_markdown()) +
+  theme(axis.text.x = element_markdown(margin = margin(r = -25, unit = "pt")))
+
+plotly::ggplotly(races_boxplot)
+
+```
+
+<br>
+<br>
 
 ```{r, echo = FALSE}
 
@@ -429,7 +476,7 @@ constructor_lineplot <- constructor_points2 %>%
          Plot: @steodosescu") +
     theme_custom() +
   scale_x_continuous(breaks=seq(0, 22, 1)) +
-    theme(plot.title = element_text(face = "bold"),
+    theme(plot.title = element_text(face = "bold", size = 20),
           plot.subtitle = element_markdown(),
           axis.text.x = element_text(face="bold"),
           axis.text.y = element_text(face="bold"),
