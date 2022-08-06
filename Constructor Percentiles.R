@@ -22,6 +22,7 @@ library(ggsci)
 library(rsvg)
 library(ggalt)
 library(plotly)
+library(ggbeeswarm)
 
 
 
@@ -474,13 +475,13 @@ for (i in 1:length(facet_id)) {
 p1 <- cowplot::ggdraw(p_bld)
 
 
-# 5. Grouped boxplot
+# 5a. Grouped boxplot
 combined_long %>% 
     mutate('constructor_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/manufacturers/', constructorRef, '.png')) %>%
     mutate(logos = link_to_img(constructor_logo)) %>% 
     arrange(desc(position)) %>% 
     mutate(constructorRef = fct_reorder(constructorRef, position)) %>%
-    ggplot(aes(x = logos, y = position, fill = type, alpha = 0.2)) + 
+    ggplot(aes(x = fct_reorder(logos, position), y = position, fill = type, alpha = 0.2)) + 
     geom_boxplot() +
     scale_fill_manual(values=c("#2E86C1", "#CB4335")) +
     theme_custom() +
@@ -519,7 +520,39 @@ boxplot_with_logo <- add_logo(
 magick::image_write(boxplot_with_logo, "Constructors Boxplot Plot with Logo.png")
 
 
-## 5. Race Results Table
+
+# 5b. fancier grouped boxplot
+combined_long %>% 
+    mutate('constructor_logo' = paste0('https://raw.githubusercontent.com/steodose/F1/master/manufacturers/', constructorRef, '.png')) %>%
+    mutate(logos = link_to_img(constructor_logo)) %>% 
+    arrange(desc(position)) %>% 
+    mutate(constructorRef = fct_reorder(constructorRef, position)) %>%
+    ggplot(aes(x = fct_reorder(logos, position), y = position, color = type, alpha = 0.2)) + 
+    geom_boxplot() +
+    geom_point(position = position_jitter(width = .1, seed = 0), size = 2, alpha = .5) +
+    scale_fill_manual(values=c("#2E86C1", "#CB4335")) +
+    theme_custom() +
+    theme(plot.title.position = 'plot', 
+          plot.title = element_text(face = 'bold',
+                                    size = 20,
+                                    hjust = 0.5),
+          plot.subtitle = element_text(
+              margin = margin(t = 3, b = 2, unit = "mm"),
+              hjust = 0.5
+          ),
+          panel.grid.major = element_blank()) +
+    scale_y_reverse() +
+    labs(x = "", y = "Position",
+         title = "Ferrari's Strategy: Go Big or Go Home",
+         subtitle = glue("Distribution of <span style = 'color:#2E86C1'>**grid starting positions**</span> and <span style = 'color:#CB4335'>**race finishes**</span> for each F1 team in 2022. Data thru **{latest_race}** races."),
+         caption = "Data: Ergast API\nGraphic: @steodosescu") +
+    theme(axis.text.x = element_markdown(margin = margin(r = -25, unit = "pt"))) +
+    theme(legend.position = "none") +
+    theme(plot.title = element_text(face = "bold", size = 20)) +
+    theme(plot.title = element_markdown()) +
+    theme(plot.subtitle = element_markdown())
+
+## 6. Race Results Table
 
 # pivot wider and clean up df
 races_table_wider <- races_2022 %>% 

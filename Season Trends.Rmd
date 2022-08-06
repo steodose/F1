@@ -225,10 +225,11 @@ latest_race <- max(driver_results_2022$date)
 ```
 
 
+<br>
+<br>
+
 ### Drivers Trends
 
-<br>
-<br>
 
 ```{r, echo = FALSE}
 
