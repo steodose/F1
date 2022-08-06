@@ -1,6 +1,5 @@
 ---
 title: "Season Trends"
-date: 'Last updated: `r format(Sys.Date())`'
 output:
   html_document:
     toc: no
@@ -321,7 +320,8 @@ race_results_table <- races_table_wider %>%
     gt_theme_538() %>%
     tab_header(title = md("**2022 Formula 1 World Championship**"),
                subtitle =glue("Race results as of {latest_race}.")) %>%
-  tab_options(  table.font.size = 20) %>%
+  tab_options(table.font.size = 16,
+              heading.title.font.size = 20) %>%
     tab_source_note(
         source_note = md("Data: Ergast API<br>Table: @steodosescu"))
 
