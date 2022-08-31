@@ -430,7 +430,8 @@ races_boxplot <- driver_results_2022 %>%
     theme(plot.title = element_text(face = "bold", size = 20)) +
     theme(plot.title = element_markdown()) +
     theme(plot.subtitle = element_markdown()) +
-  theme(axis.text.x = element_markdown(margin = margin(r = -25, unit = "pt")))
+  #theme(axis.text.x = element_markdown(margin = margin(r = -25, unit = "pt"))) +
+    theme(axis.text.y = element_markdown())
 
 plotly::ggplotly(races_boxplot)
 
