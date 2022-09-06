@@ -53,7 +53,7 @@ constructor_standings <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f
 constructors <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/constructors.csv")
 driver_standings <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/driver_standings.csv")
 drivers <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/drivers.csv")
-lap_times <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/lap_times.csv")
+#lap_times <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/lap_times.csv")
 pit_stops <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/pit_stops.csv")
 qualifying <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/qualifying.csv")
 races <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/races.csv")
