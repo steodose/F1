@@ -50,7 +50,7 @@ constructor_standings <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f
 constructors <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/constructors.csv")
 driver_standings <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/driver_standings.csv")
 drivers <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/drivers.csv")
-lap_times <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/lap_times.csv")
+#lap_times <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/lap_times.csv")
 pit_stops <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/pit_stops.csv")
 qualifying <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/qualifying.csv")
 races <- readr::read_csv("/Users/Stephan/Desktop/R Projects/F1/f1db_csv/races.csv")
@@ -106,7 +106,7 @@ theme_538 <- function() {
 
 # Create races dataframe
 races2 <- races %>% 
-    filter(year == 2022)
+    filter(year == 2023)
 
 # filter for only first place finishers for the join
 results2 <- results %>% 
@@ -275,7 +275,7 @@ races_table <- reactable(
                   fullWidth = FALSE, 
                   defaultColDef = colDef(align = "center", minWidth = 95)
         ) %>% 
-  add_title("2022 Formula 1 Race Schedule",
+  add_title("2023 Formula 1 Race Schedule",
             font_size = 28) %>% 
   add_subtitle("Click a column header to sort by that statistic.",
                font_size = 14,
